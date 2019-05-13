@@ -11,7 +11,11 @@ public class Main {
         String paper;
         String scissors;
         String shoot;
+        int [] rockPaperScissors;
         System.out.println("Let's play rock, paper, scissors!!");
+        int chosenWeapon = keyboard.nextInt();
+        rockPaperScissors = new int[chosenWeapon];
+
         System.out.println("Rock...");
         System.out.println("Paper...");
         System.out.println("Scissors...");
@@ -19,7 +23,42 @@ public class Main {
         shoot = keyboard.nextLine();
         System.out.println(""+shoot+"");
 
+        do {
+            if (shoot < pickedNumber) {
+                System.out.println("Nope, too low. Guess again");
+            }
+            if (shoot > pickedNumber) {
+                System.out.println("Nope, too high. Guess again");
+            }
+
+            shoot = keyboard.nextLine();
+
+
+        }while (shoot != pickedNumber);
+
+
+
+
+        if (shoot == pickedNumber){
+            System.out.println("CORRECT!!! You guessed it!");
+        }
+
 
 
     }
+    public static int[]inputWeapon (int[] weaponArray, Scanner keyboard){
+           for (int inputWeapon;) {
+               System.out.println("Select a weapon");
+               weaponArray[2] = keyboard.nextInt();
+           }
+           return weaponArray;
+    }
+    public static String printMonth (int month){
+        switch (month) {
+            case 1:
+                return "January";
+            case 2:
+                return "February";
+            case 3:
+                return "March";
 }
