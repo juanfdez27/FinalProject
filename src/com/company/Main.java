@@ -13,9 +13,25 @@ public class Main {
         String shoot;
         int[] rockPaperScissors;
         System.out.println("Let's play rock, paper, scissors!!");
+        System.out.println("If rock type 1, If paper type 2, and If scissors type 3");
+        System.out.println("Select your weapon of choice");
         int chosenWeapon = keyboard.nextInt();
         rockPaperScissors = new int[chosenWeapon];
+        rockPaperScissors = selectedWeapon(rockPaperScissors, keyboard);
 
+        do {
+            if (guess < pickedNumber) {
+                System.out.println("Nope, too low. Guess again");
+            }
+            if (guess > pickedNumber) {
+                System.out.println("Nope, too high. Guess again");
+            }
+
+            guess = keyboard.nextInt();
+
+
+        }while (guess != pickedNumber);
+        
         System.out.println("Rock...");
         System.out.println("Paper...");
         System.out.println("Scissors...");
@@ -28,16 +44,16 @@ public class Main {
 
     }
 
-    public static int[] inputWeapon(int[] weaponArray, Scanner keyboard) {
-        for (int i=0; i = weaponArray.length; i++){
-            System.out.println("Select a weapon");
-            weaponArray[i] = keyboard.nextInt();
+    public static int[] selectedWeapon(int[] weaponArray, Scanner keyboard) {
+        for (int i=0; i < weaponArray.length; i++){
+            System.out.println("Confirm your weapon");
+            weaponArray[0] = keyboard.nextInt();
         }
         return weaponArray;
     }
 
-    public static String weaponNumber(int chosenWeapon) {
-        switch (chosenWeapon) {
+    public static String weaponNumber(int rockPaperScissors) {
+        switch (rockPaperScissors) {
             case 1:
                 return "Rock";
             case 2:
