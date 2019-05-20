@@ -10,7 +10,7 @@ public class Main {
         String rock;
         String paper;
         String scissors;
-        String shoot;
+        String score;
         int[] rockPaperScissors;
         System.out.println("Let's play rock, paper, scissors!!");
         System.out.println("If rock type 1, If paper type 2, and If scissors type 3");
@@ -18,26 +18,34 @@ public class Main {
         int chosenWeapon = keyboard.nextInt();
         rockPaperScissors = new int[chosenWeapon];
         rockPaperScissors = selectedWeapon(rockPaperScissors, keyboard);
+        int weaponArray;
+        weaponArray = keyboard.nextInt();
+
+
 
         do {
-            if (guess < pickedNumber) {
-                System.out.println("Nope, too low. Guess again");
+            if (chosenWeapon > chosenWeapon) {
+                System.out.println("I win");
             }
-            if (guess > pickedNumber) {
-                System.out.println("Nope, too high. Guess again");
+            if (chosenWeapon < chosenWeapon) {
+                System.out.println("You win");
+            }
+            if (chosenWeapon == chosenWeapon){
+                System.out.println("It's a tie");
             }
 
-            guess = keyboard.nextInt();
+            weaponArray = keyboard.nextInt();
 
 
-        }while (guess != pickedNumber);
-        
+        }while (chosenWeapon != chosenWeapon );
+
         System.out.println("Rock...");
         System.out.println("Paper...");
         System.out.println("Scissors...");
         System.out.println("SHOOT!");
-        shoot = keyboard.nextLine();
-        System.out.println("" + shoot + "");
+        weaponArray = keyboard.nextInt();
+        System.out.println("" + weaponArray + "");
+
 
 
 
@@ -66,10 +74,12 @@ public class Main {
 
     }
 
-   // public static String shoot (int weaponValue ) {
-       // String rock > String scissors;
-       // String rock < String paper;
-       // String scissors > String paper;
-//}
+    public static String shoot (int weaponValue ) {
+        //case 1 > case 3;
+        //case 1 < case 2;
+       // case 3 > case 2;
+        return shoot(weaponValue);
+}
+    //public static String score
 
 }
