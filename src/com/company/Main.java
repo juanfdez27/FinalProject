@@ -24,7 +24,8 @@ public class Main {
         int chosenWeapon = keyboard.nextInt();
         int computerInput = (int) Math.random();
         double weaponArray = computerInput * 2;
-        
+
+
 
 
 
@@ -36,7 +37,7 @@ public class Main {
         System.out.println("SHOOT!");
 
 
-        System.out.println("I picked " + weaponArray + ", you picked " + chosenWeapon + "");
+        System.out.println("I picked " + rock + ", you picked " + chosenWeapon + "");
 
 
         //case 0 < case 1;
@@ -53,11 +54,13 @@ public class Main {
             if (weaponArray == chosenWeapon) {
                 System.out.println("It's a tie");
             }
-
+System.out.println("Lets play again");
             weaponArray = keyboard.nextInt();
 
 
         } while (weaponArray != chosenWeapon);
+
+
 
 
     }
@@ -82,6 +85,9 @@ public class Main {
 
 
 
+        }
+        public static String score (double weaponArray){
+        return "The score is 1-0";
         }
 
     }
